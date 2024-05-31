@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Собираем ПК</title>
-    <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest"></script> <!--  кроссбраузерый скролл -->
+    <script src="./js/accordeon.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/smoothScroll.js" defer></script>
     <!--интепретатор скачивает всю инфу из файла и читает верстку,  но его выпонение открладывает до тех пор, пока не считает всю верстку-->
     <!-- async интепретатор скачивает всю инфу из файла и читает версткуб но как только всю инфу скачает (не дожидаясь считывания всей весрки) запустит скрипт. Используется для подлкючения метрик, async Яндекс карт -->
 </head>
@@ -21,9 +24,9 @@
             </a>
             <div class="header__menu">
                 <nav class="header__nav block-center-horis">
-                    <a href="#">Чем занимаемся</a>
-                    <a href="#">Процесс работы</a>
-                    <a href="#">Команда</a>
+                    <a href="#work">Чем занимаемся</a> <!-- href="#work" чтоыбс кроллить к секции с id="#work" -->
+                    <a href="#process">Процесс работы</a>
+                    <a href="#command">Команда</a>
                 </nav>
                 <button class="button header__button">Зайти в кабинет</button>
             </div>
@@ -91,7 +94,7 @@
             </div>
         </div>
 
-        <section class="work">
+        <section class="work" id="work"><!-- добавили id для скролла к секции work-->
             <div class="container">
                 <div class="work__wrap">
                     <div class="work__img">
@@ -108,7 +111,7 @@
             </div>
         </section>
 
-        <section class="process">
+        <section class="process" id="process"><!-- добавили id для скролла к секции process -->
             <div class="container">
                 <div class="process__wrap">
                     <div class="process__title block-center-horis">
@@ -206,7 +209,7 @@
             </div>
         </section>
 
-        <section class="command">
+        <section class="command" id="command">
             <div class="container">
                 <div class="process__title command__title">
                     <div class="process__img command__img-title">
@@ -268,7 +271,7 @@
         </section>
     </main>
 
-    <form action="#" class="modal block-center">
+    <form action="#" class="modal block-center"><!-- overlay-подложка под модалку -->
         <div class="modal__inner">
             <div class="modal__header">Заявка на сборку ПК</div>
             <div class="modal__subheader">Мы свяжемся с вами, чтобы обсудить детали заказа</div>
